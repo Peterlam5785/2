@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <!-- SEO 优化 -->
+    <title>月子中心声光疗愈解决方案 - 专业产后恢复服务</title>
+    <meta name="description" content="专为月子中心打造的声光疗愈解决方案，有效解决产后妈妈情绪、睡眠、身体恢复三大难题，提升服务溪价和客户满意度" />
+    <meta name="keywords" content="月子中心,声光疗愈,产后恢复,产后抑郁,失眠治疗,伤口愈合,音乐疗愈,光疗系统" />
+    <meta name="author" content="声光疗愈研究院" />
+    
+    <!-- 微信分享优化 -->
+    <meta property="og:title" content="月子中心声光疗愈解决方案" />
+    <meta property="og:description" content="专业产后恢复服务，解决情绪、睡眠、身体恢复三大难题" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://picture-search.skywork.ai/aippt/image/sheet/5873531dedc9a4bb5e6c010604ef9e02.jpg" />
+    
+    <!-- 移动端优化 -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="声光疗愈" />
+    
+    <!-- 预加载关键资源 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    
+    <!-- 防止缩放和触摸优化 -->
+    <style>
+      * {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+      }
+      
+      body {
+        -webkit-user-select: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+      
+      /* 允许文本选择 */
+      p, span, h1, h2, h3, h4, h5, h6, input, textarea {
+        -webkit-user-select: text;
+        -moz-user-select: text;
+        -ms-user-select: text;
+        user-select: text;
+      }
+      
+      /* 修复 iOS Safari 上的 100vh 问题 */
+      .min-h-screen {
+        min-height: -webkit-fill-available;
+      }
+      
+      /* 隐藏滚动条但保持功能 */
+      ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
+      
+      /* 加载动画 */
+      #loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #FFF8F4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease;
+      }
+      
+      .loading-logo {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #F4E5E1 0%, #E6D7E7 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        animation: pulse 2s infinite;
+      }
+      
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 加载动画 -->
+    <div id="loading">
+      <div class="loading-logo">声</div>
+    </div>
+    
+    <!-- 主应用 -->
+    <div id="root"></div>
+    
+    <!-- 初始化脚本 -->
+    <script>
+      // 移除加载动画
+      window.addEventListener('load', function() {
+        setTimeout(() => {
+          const loading = document.getElementById('loading');
+          if (loading) {
+            loading.style.opacity = '0';
+            setTimeout(() => {
+              loading.remove();
+            }, 500);
+          }
+        }, 1000);
+      });
+      
+      // 防止在微信中被缩放
+      document.addEventListener('gesturestart', function (e) {
+        e.preventDefault();
+      });
+      
+      // 解决iOS Safari上的viewport问题
+      function setViewport() {
+        if (window.innerHeight) {
+          document.documentElement.style.setProperty('--vh', window.innerHeight + 'px');
+        }
+      }
+      setViewport();
+      window.addEventListener('resize', setViewport);
+    </script>
+    
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
